@@ -18,16 +18,12 @@ from sklearn import datasets
 # Copy and paste the code for that function here:
 # -----------------------------------------------
 def my_mlp(w, X, sigma=np.tanh):
-<<<<<<< HEAD
     W1 = w[:4*6].reshape((4, 6))
     W2 = w[W1.size:W1.size+7*4].reshape((7, 4))
     W3 = w[W1.size + W2.size:W1.size + W2.size + 1*7].reshape((1, 7))
     a1 = sigma(W1 @ X)
     a2 = sigma(W2 @ a1)
     f = sigma(W3 @ a2)
-=======
-
->>>>>>> aebf7abc3710c8de942b523b4abd121fb9b4835c
     return f
 # -----------------------------------------------
  
@@ -41,14 +37,9 @@ def my_mlp(w, X, sigma=np.tanh):
  
 # Copy and paste the code for that function here:
 # -----------------------------------------------
-<<<<<<< HEAD
 def MSE_func(w, X, y):
     f = my_mlp(w, X)
     MSE = np.sum((f - y) ** 2)
-=======
-def MSE_func(w, X, y): # give the appropriate name and arguments
-
->>>>>>> aebf7abc3710c8de942b523b4abd121fb9b4835c
     return MSE
 # -----------------------------------------------
  
@@ -65,12 +56,7 @@ def MSE_func(w, X, y): # give the appropriate name and arguments
 # Copy and paste the code for that function here:
 # -----------------------------------------------
 def dR(beta, x, y):
-<<<<<<< HEAD
     dbeta_0 = 2*np.mean((beta[0] + beta[1] * x - y))
     dbeta_1 = 2*np.mean((beta[0] + beta[1] * x - y) * x)
-=======
-    # implement the above formula for dR/dβ₀
-    # implement the above formula for dR/dβ₁
->>>>>>> aebf7abc3710c8de942b523b4abd121fb9b4835c
     return np.array([dbeta_0, dbeta_1])
 # -----------------------------------------------
